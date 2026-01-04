@@ -1,0 +1,115 @@
+@use "../variables" as *;
+.footer {
+  margin-top: 100px;
+  .container {
+    .row {
+      flex-direction: column;
+      gap: 20px;
+      .footerTopSide {
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: center;
+        .footerContact {
+          display: flex;
+          gap: 20px;
+          a {
+            border: 1px solid $highight;
+            padding: 20px;
+            border-radius: 10px;
+            color: $highight;
+            &:hover {
+              background-color: $highight;
+              color: $softBlack;
+            }
+            &:active {
+              color: $softWhite;
+              transform: scale(0.8);
+            }
+          }
+        }
+        .footerBlock {
+          color: $lightGray;
+        }
+      }
+      .sosialLinks {
+        display: flex;
+        gap: 10px;
+        a {
+          color: $gray;
+          font-size: 25px;
+          margin: 50px 0;
+        }
+        .fotterIcon {
+          &:hover {
+            color: $highight;
+            transform: translateY(-5px) scale(1.3);
+          }
+          &:active {
+            color: $secondary;
+            transform: scale(0.8);
+          }
+        }
+      }
+      .footerBottomSide {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        padding-top: 20px;
+        .robot {
+          width: 100%;
+          height: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 100px;
+    .container {
+      .row {
+        .footerTopSide {
+          display: flex;
+          gap: 40px;
+          flex-direction: column;
+          align-items: self-start;
+          .footerContact {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            a {
+              border: 1px solid $highight;
+              padding: 10px;
+              border-radius: 10px;
+              color: $highight;
+            }
+          }
+        }
+        .footerBottomSide {
+          width: 100%;
+          position: relative;
+          bottom: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .robot {
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
