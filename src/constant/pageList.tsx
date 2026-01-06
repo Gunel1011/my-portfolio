@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import Home from "../Modules/Home/View/Home";
-
 interface IPage {
   id: string;
   title: string;
