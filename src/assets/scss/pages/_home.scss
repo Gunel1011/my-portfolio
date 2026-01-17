@@ -1,9 +1,11 @@
 @use "../variables" as *;
+
 .home {
   margin-top: 40px;
   height: 100vh;
   overflow: hidden;
   position: relative;
+
   video {
     position: absolute;
     width: 100%;
@@ -13,22 +15,23 @@
     bottom: 0;
     z-index: -2;
   }
+
   .video-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.692) 0%,
-      rgba(0, 0, 0, 0.731) 100%
-    );
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.692) 0%,
+        rgba(0, 0, 0, 0.731) 100%);
     z-index: -1;
   }
+
   .container {
     .row {
       justify-content: space-between;
+
       .homeBlock {
         width: 100%;
         height: calc(100vh - 60px);
@@ -36,14 +39,17 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         .homeTitle {
           font-size: 100px;
           color: $highight;
         }
+
         .homeWork {
           color: $secondary;
           font-size: 20px;
         }
+
         .homeBio {
           color: $dimWhite;
           display: flex;
@@ -51,6 +57,7 @@
           font-style: italic;
           font-size: 25px;
           margin-bottom: 10px;
+
           .bioIcon {
             color: $highight;
             margin: 0 10px;
@@ -58,12 +65,14 @@
           }
         }
       }
+
       .homeBtns {
         position: relative;
         z-index: 4;
         top: 5%;
         left: 2%;
         display: flex;
+
         .homeCookie {
           font-size: 30px;
           color: $secondary;
@@ -71,44 +80,53 @@
           opacity: 0;
           visibility: hidden;
         }
+
         .homeToWorkLink {
           color: $highight;
           border: 1px solid $highight;
           padding: 10px 20px;
           border-radius: 8px;
+
           &:hover {
             background-color: $highight;
             color: $darkBlack;
-            & + .homeCookie {
+
+            &+.homeCookie {
               opacity: 1;
               visibility: visible;
               transform: translate(-20px, -20px) rotate(45deg);
             }
           }
+
           &:active {
             transform: scale(0.6);
           }
         }
+
         .homeContactBtn {
           color: $darkBlack;
           background-color: $highight;
           border-radius: 8px;
           padding: 10px 20px;
           border: 1px solid $secondary;
+
           &:hover {
             background-color: transparent;
             color: $highight;
-            & + .homeCookie {
+
+            &+.homeCookie {
               opacity: 1;
               visibility: visible;
               transform: translate(-20px, -20px) rotate(45deg);
             }
           }
+
           &:active {
             transform: scale(0.6);
           }
         }
       }
+
       .reactModel {
         width: 100%;
         height: 100vh;
@@ -125,6 +143,7 @@
   .home {
     margin-top: 30px;
     height: 90vh;
+
     video {
       position: absolute;
       width: 100%;
@@ -143,10 +162,12 @@
             font-size: 50px;
             color: $highight;
           }
+
           .homeWork {
             color: $secondary;
             font-size: 20px;
           }
+
           .homeBio {
             color: $dimWhite;
             display: flex;
@@ -154,6 +175,7 @@
             font-style: italic;
             font-size: 16px;
             margin-bottom: 10px;
+
             .bioIcon {
               color: $highight;
               margin: 0 10px;
@@ -161,16 +183,19 @@
             }
           }
         }
+
         .homeBtns {
           position: relative;
           z-index: 4;
           top: 5%;
           display: flex;
           gap: 20px;
+
           .homeCookie {
             display: none;
           }
         }
+
         .reactModel {
           display: none;
         }

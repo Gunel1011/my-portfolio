@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Home from "../Modules/Home/View/Home";
+import About from "../Modules/About/View/About";
 interface IPage {
   id: string;
   title: string;
@@ -19,22 +20,22 @@ const pageList: IPage[] = [
     id: "about",
     title: "About",
     path: "/",
-    element: <Home />,
+    element: <About />,
     is_visible: true,
   },
-  {
-    id: "work",
-    title: "Work",
-    path: "/",
-    element: <Home />,
-    is_visible: true,
-  },
-  {
-    id: "contact",
-    title: "Contact",
-    path: "/",
-    element: <Home />,
-    is_visible: true,
-  },
+  // {
+  //   id: "work",
+  //   title: "Work",
+  //   path: "/",
+  //   element: <Home />,
+  //   is_visible: true,
+  // },
+  // {
+  //   id: "contact",
+  //   title: "Contact",
+  //   path: "/",
+  //   element: <Home />,
+  //   is_visible: true,
+  // },
 ];
 export default pageList;

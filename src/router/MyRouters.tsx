@@ -1,15 +1,16 @@
-import { Route, Routes } from "react-router-dom";
 import pageList from "../constant/pageList";
 
 const MyRouters = () => {
   return (
-    <Routes>
+    <div className="sectionsWrapper">
       {pageList
         .filter((item) => item.is_visible)
         .map((page) => (
-          <Route key={page.id} element={page.element} path={page.path} />
+          <section key={page.id} id={page.id}>
+            {page.element}
+          </section>
         ))}
-    </Routes>
+    </div>
   );
 };
 
